@@ -1,13 +1,835 @@
-body {
+/* Reset some default styles */
+body,
+h1,
+h2,
+p,
+button {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /* background-color: white; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Global Styles */
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
 }
+
+
+
+/* Carousel */
+.carousel {
+  background-color: lightblue;
+ 
+
+}
+.carousel h3{
+  margin-top: 10px;
+}
+.carousel h1{
+text-transform: uppercase;
+font-size: 30px;
+color: lightcyan;
+}
+
+.carousel-caption {
+  background-color: rgba(1, 1, 1, 0.5);
+
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.slider-button {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.btn-1 {
+  background-color: black;
+  color: whitesmoke;
+  border: none;
+  padding: 0.5rem rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0px;
+
+}
+
+.carousel-inner img {
+
+  width: 100%;
+  height: 600px;
+}
+
+/* Horizontal Scrolling Section */
+.disorders-scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 0;
+}
+
+.scroll-container {
+  display: flex;
+}
+
+.scroll-content {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.classification {
+  padding: 2rem 0;
+  background-image: url(../public/images/brainblur.avif);
+
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.classification-container {
+  margin-left: 650px;
+  width: 1200px;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7rem;
+ margin-top: 40px;
+margin-right: 0px;
+}
+
+.category {
+  width: calc(30% - 1rem);
+  /* Two categories per row with 1rem gap */
+  padding: 1rem;
+
+  border-radius: 5px;
+  background-color: #fff;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+}
+
+.classification-container h2 {
+  margin-right: 350px;
+  font-weight: bolder;
+  text-transform: uppercase;
+
+}
+
+.category h3 {
+  margin-bottom: 1rem;
+  margin-right: 0px;
+
+}
+
+
+.category ul {
+  list-style-type: disc;
+  padding-left: 1rem;
+
+}
+
+/* Add media query for responsiveness */
+@media (max-width: 768px) {
+  .category {
+    width: 100%;
+  }
+}
+
+/* Responsive styling */
+@media (max-width: 1200px) {
+  .category {
+    width: 45%;
+    /* Adjust width for smaller screens */
+  }
+}
+
+.user {
+  flex: 2 2 auto;
+  /* Full width by default */
+  /* background-image: url(images/blueback.avif); */
+  border: 4px solid grey;
+  background-color: powderblue;
+  padding: 10px;
+  margin-right: 6px;
+  margin-left: 6px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.user-details {
+  flex: 2 2 auto;
+  /* Full width by default */
+  /* background-image: url(images/blueback.avif); */
+  border: 4px solid lightblue;
+  background-color: #f8f9fa;
+  padding: 10px;
+  margin-right: 6px;
+  margin-left: 6px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.70 rem;
+  margin-bottom: 15px;
+}
+
+
+/* Navbar.css */
+.navbar {
+  height: 60px;
+  display: flex;
+/* Add your desired background color */
+  color: black; /* Add your desired text color */
+}
+
+.logo-container {
+  display: flex;
+
+
+  text-decoration: none;
+}
+
+.logo {
+  width: 120px; 
+  height: 70px;
+}
+
+.navbar h3 {
+margin-top: 6px;
+color: black;
+  font-size: 1.6rem; 
+
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  font-size: 1rem; /* Adjust the font size of navigation links */
+  margin: 0; /* Remove margin to avoid extra spacing */
+}
+
+nav li {
+  font-size: 25px;
+  margin-right: 25px; 
+  margin-bottom: 30px;/* Adjust the spacing between navigation links */
+}
+
+nav a {
+  text-decoration: none;
+  color: black; /* Add your desired link color */
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styling */
+@media (max-width: 700px) {
+  .navbar {
+    max-height:1700px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+nav ul {
+    margin-top: 10px; /* Add margin between the logo and the navigation links for smaller screens */
+  }
+
+  nav li {
+    margin: 5px 0; /* Adjust the spacing between navigation links for smaller screens */
+  }
+
+}
+/*  form styling */
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+  border: 1px solid #ccc;
+  /* Add border to the form */
+  padding: 12px;
+  /* Add padding to the form */
+  border-radius: 5px;
+  /* Add border-radius for rounded corners */
+}
+
+label {
+  margin-top: 11px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+input,
+select {
+  margin-bottom: 10px;
+  padding: 5px;
+  height: 30px;
+  /* Decrease the height of the input field */
+  border: 1px solid black;
+  background-color:whitesmoke;
+  /* Add border to the input field */
+  border-radius: 3px;
+  /* Add border-radius for rounded corners */
+
+}
+
+button {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: black;
+}
+
+input#contactNo {
+  margin-bottom: 20px;
+  /* Increase the margin-bottom for the "Contact Number" input */
+}
+
+button {
+  margin-top: 20px;
+  /* Add margin-top to create space above the submit button */
+}
+
+
+
+/* Primarygoals */
+.body1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 35vh;
+  margin: 20px;
+
+  background-color:whitesmoke;
+}
+
+.badge-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1px;
+  overflow: auto;
+}
+
+.body1 h1{
+  margin-left: 20px;
+  font-size: 45px;
+}
+
+.badge {
+  position: relative;
+  width: 240px;
+  height: 150px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  clip-path: polygon(20% 10%, 190% 5%, 80% 95%, 90% 100%, 5% 705%, 10% 10%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 40px;
+  font-weight: bolder;
+  transition: transform 0.3s;
+
+}
+
+.badge:hover {
+  transform: scale(1.2);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+/* Define colors for each goal */
+.goal-1 {
+
+  background-color: yellowgreen;
+
+}
+
+.goal-3 {
+  background-color: lightskyblue;
+}
+
+.goal-4 {
+  background-color: darkorchid;
+}
+
+.goal-5 {
+  background-color: orange;
+}
+
+.goal-6 {
+  background-color: hotpink
+}
+
+.goal-7 {
+  background-color: turquoise;
+}
+
+.goal-8 {
+  background-color: lime;
+}
+
+
+
+/* SpecialActivitiesCards.css */
+
+/* Card Styles */
+.card-title {
+  font-size: 1.45rem;
+
+}
+.row h2{
+  font-size: 50px;
+ margin-bottom: 20px;
+ text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the new card columns */
+.medium-card {
+  padding: 0.18rem;
+  border: 18px;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  margin-top: 20px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.medium-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+}
+
+.medium-card img {
+  height: 380px;
+
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.medium-card h5 {
+
+  font-size: 1.65rem;
+
+}
+
+.medium-card p {
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+}
+
+.medium-card::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  z-index: -1;
+  background: linear-gradient(45deg, white, lightblue);
+  border-radius: 15px;
+  pointer-events: none;
+}
+
+/* Additional styles for spacing */
+.container {
+
+  max-width: 1310px;
+
+}
+
+.row {
+  justify-content: space-between;
+  /* Add space between the columns */
+}
+
+.col-md-4 {
+  flex: 0 0 calc(33.333% - 1rem);
+
+}
+
+@media (max-width: 768px) {
+  .col-md-4 {
+    flex: 0 0 100%;
+
+  }
+}
+
+
+/* Contact.css */
+
+.contact-us .col-md-6:last-child {
+  width: 50%;
+  padding: 1rem;
+  background-color: #f5f5f5;
+}
+
+.contact-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+.google-map {
+  position: relative;
+  padding-bottom: 50%;
+  height: 400px;
+}
+
+.google-map iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.contact-form {
+
+  padding: 2rem;
+  background-color: black;
+
+
+}
+
+.contact-form h2 {
+  background-color: black;
+  color: aliceblue;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid blanchedalmon;
+  border-radius: 3px;
+color: black;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: darkgrey;
+  color: black;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* Video.css */
+.video-container {
+text-transform: uppercase;
+text-align: center;
+  background-color: white;
+/* Remove extra space at the top */
+  margin-bottom: 50px; /* Add margin at the bottom */
+}
+.video-container h1{
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 30px;
+
+}
+
+
+.video-slider {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+ /* Hide the scrollbar */
+  width: 100%;
+  height:270px;/* Make sure the container takes full width */
+}
+
+.video-row {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+
+
+
+}
+
+
+.video {
+
+  margin-top: 30px;
+  margin-right: 40px;
+  transition: transform 0.3s;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 1); */
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.video:hover {
+  transform: scale(1.1); /* Increase size on hover */
+}
+
+
+
+.arrow {
+  font-size: larger;
+  cursor: pointer;
+  padding: 10px;
+  background-color: white;
+  color: #333;
+}
+
+.arrow:hover {
+  background-color: white;
+}
+
+.arrow.left {
+  margin-right: 10px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .video {
+    margin-right: 20px;
+  }
+}
+
+/* details.js file */
+.details-container {
+  text-align: center;
+  color: black;
+ 
+}
+
+.details-container h2 {
+  color: black;
+  background-color: white;
+  font-weight: bolder;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.details-container p {
+  font-size: 1.2rem;
+  text-align: center;
+  text-align: justify;
+  line-height: 1.5;
+  margin-left: 120px;
+  margin-right: 120px;
+  margin-bottom: 10px;
+}
+
+.details-container .mind-map {
+  position: relative;
+  height: 300px; /* Set the desired height of the mind map */
+
+}
+
+.mind-map .bubble {
+  position: absolute;
+  width: 240px;
+  height: 140px;
+  background-color: seashell;
+font-style:oblique;
+font-weight: bold;
+
+  border-radius: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 110px;
+  font-size:25px;
+
+  transition: background-color 0.5s;
+}
+
+.mind-map .bubble:hover {
+  background-color: whitesmoke;
+  color: #333;
+}
+
+
+
+
+/* Story.css */
+.story-container {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  padding: 15px;
+  margin-left: 20px;
+  margin-right: 30px;
+  text-align: justify;
+  color: white;
+}
+
+.story-container h2 {
+margin-top: 10px;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.background-image {
+  position: absolute;
+  width: 67%;
+  height: 98%;
+  background-image: url('../public/images/disgirlsitcard.webp');
+  /* Replace with the actual path to your background image */
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px);
+  /* Adjust the blur amount as needed */
+  opacity: 0.3;
+  /* Adjust the opacity as needed */
+  z-index: -1;
+}
+
+.text-section {
+  flex: 1;
+
+
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-left: 30px;
+  margin-right: 30px;
+  color: black;
+  text-align: justify;
+}
+
+.myvideo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 30px;
+
+}
+
+.myvideo {
+  margin-right: 5px;
+  margin-left: 20px;
+  width: 400px;
+  /* Adjust the width as needed */
+  transition: transform 0.3s;
+}
+
+.myvideo:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  .myvideo {
+    margin-right: 20px;
+  }
+}
+
+/* Add this to your existing CSS file or create a new one */
+
+.image-and-link-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.image-container {
+  flex: 1;
+  margin-right: 10px;
+  /* Adjust the spacing between image and text */
+}
+
+.image {
+  margin-left: 20px;
+  width: 1100px;
+  max-width: 3000px;
+  margin-bottom: 50px; /* Adjust the maximum width as needed */
+  animation: shake 0.8s infinite; /* Add the shake animation to the image */
+}
+
+/* Adjust the animation duration and other parameters as needed */
+
+
+.text-container {
+  flex: 1;
+  font-weight: bold;
+ 
+}
+
+.link-text {
+  font-size: 20px;
+  color: #333; /* Adjust the color as needed */
+}
+
+.click-here {
+  color: red; /* Adjust the color as needed */
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* styles.css (or your preferred style file) */
+.footer-container {
+  background-color: whitesmoke;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  margin-top:10px;
+}
+
+
+.quote-container {
+  margin-bottom: 20px;
+}
+
+.quote {
+  font-size: 28px;
+  line-height: 1.2;
+  font-style: italic;
+  margin-bottom:20px;
+  font-weight: bolder;
+
+}
+
+.quote-mark {
+  font-size: 36px;
+  margin-right: 5px;
+  margin-left: -5px;
+
+}
+
+.links a {
+  color: brown;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size:20px;
+  text-decoration: underline;
+}
+
+.footer-content {
+ font-size: 14px;
+
+}
+
